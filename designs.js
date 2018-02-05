@@ -40,9 +40,8 @@ function changeCurrentColor(event) {
   $("#colorPicker").val(hexc(newColor))
 }
 
-// Honestly, I had to google a way to do this conversion and got the gist from
-//https://stackoverflow.com/questions/15716702/get-background-color-in-000-format-and-not-rgb
-// but I understand the reasoning behind this converter function
+//I got help from Stackoverflow in making these
+
 function hexc(colorval) {
     var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     delete(parts[0]);
@@ -56,7 +55,7 @@ function hexc(colorval) {
 }
 
 $(document).ready(function() {
-  hexcolors = ["#F39C12","#CB4335","#F1C40F","#28B463","#2471A3","#7D3C98", "#1B2631"]
+  hexcolors = ["#F39C12","#CB4335","#F1C40F","#28B463","#2471A3","#7D3C98"]
   $.each(hexcolors, function(i,v) {
     var dyncanvas = $("<canvas>", {
       id: "color" + i,
