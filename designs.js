@@ -34,3 +34,23 @@ function colorElem(event) {
     let currentColor = $("#colorPicker").val();
     $(event.target).css("background-color", currentColor)
 }
+
+function changeCurrentColor(event) {
+  var newColor = $(event.target).css("background-color")
+  $("#colorPicker").val(hexc(newColor))
+}
+
+// Honestly, I had to google a way to do this conversion and got the gist from
+//https://stackoverflow.com/questions/15716702/get-background-color-in-000-format-and-not-rgb
+// but I understand the reasoning behind this converter function
+function hexc(colorval) {
+    var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    delete(parts[0]);
+    for (var i = 1; i <= 3; ++i) {
+        parts[i] = parseInt(parts[i]).toString(16);
+        if (parts[i].length == 1) parts[i] = '0' + parts[i];
+    }
+    color = '#' + parts.join('');
+
+    return color;
+}
