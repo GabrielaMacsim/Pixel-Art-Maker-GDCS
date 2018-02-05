@@ -2,7 +2,8 @@ body {
     align-content: center;
     text-align: center;
     margin: 0px;
-    background-color:#E3EAF0    ;
+    background-color:#E3EAF0 ;
+    font-family: Slabo;
 }
 
 header {
@@ -18,7 +19,7 @@ h1 {
 }
 
 h3 {
-    padding: 5px;
+    padding: 3px;
     color: #D4AC0D   ;
 }
 
