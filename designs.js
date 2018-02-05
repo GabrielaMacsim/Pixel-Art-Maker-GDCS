@@ -54,3 +54,14 @@ function hexc(colorval) {
 
     return color;
 }
+
+$(document).ready(function() {
+  hexcolors = ["#F39C12","#CB4335","#F1C40F","#28B463","#2471A3","#7D3C98", "#1B2631"]
+  $.each(hexcolors, function(i,v) {
+    var dyncanvas = $("<canvas>", {
+      id: "color" + i,
+      style:"border-radius:100px;margin:5px;background-color:" + v
+    }).addClass("colorboxsized").on("click", changeCurrentColor)
+    $("#colorcircles").append(dyncanvas)
+  })
+})

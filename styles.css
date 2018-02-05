@@ -40,6 +40,7 @@ td {
 
 tr {
     height: 10px;
+
     width:10px;
 }
 
@@ -154,4 +155,9 @@ aside {
 .umplutura6 {
   grid-column: 2/7;
   grid-row: 4/5;
+}
+
+.colorboxsized {
+  width: 30px;
+  height: 30px;
 }
