@@ -1,3 +1,4 @@
+
 function cleanGrid() {
   $("#pixel_canvas").empty()
 }
